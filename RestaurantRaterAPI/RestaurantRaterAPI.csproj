@@ -163,6 +163,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RatingController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +180,10 @@
     <Compile Include="Migrations\202110132046198_Added Ratings.cs" />
     <Compile Include="Migrations\202110132046198_Added Ratings.designer.cs">
       <DependentUpon>202110132046198_Added Ratings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110141445270_UpdatedRatingLogicInRestaurant.cs" />
+    <Compile Include="Migrations\202110141445270_UpdatedRatingLogicInRestaurant.designer.cs">
+      <DependentUpon>202110141445270_UpdatedRatingLogicInRestaurant.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Rating.cs" />
@@ -278,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110132046198_Added Ratings.resx">
       <DependentUpon>202110132046198_Added Ratings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110141445270_UpdatedRatingLogicInRestaurant.resx">
+      <DependentUpon>202110141445270_UpdatedRatingLogicInRestaurant.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

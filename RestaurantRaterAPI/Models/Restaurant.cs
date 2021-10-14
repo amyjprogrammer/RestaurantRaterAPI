@@ -16,7 +16,21 @@ namespace RestaurantRaterAPI.Models
 
         [Required]
         [Range(0.0, 10.0)]
-        public double Rating { get; set; }
+        public double Rating 
+        { 
+            get 
+            {
+                if (Ratings.Count == 0)
+                    return 0;
+
+                double ratingScore = 0;
+
+                foreach (var rating in Ratings)
+                    ratingScore += rating.Score;
+
+                return Math.Round(ratingScore / Ratings.Count, 2);
+            } 
+        }
 
         [Required]
         public string Location { get; set; }
@@ -30,5 +44,11 @@ namespace RestaurantRaterAPI.Models
         }
         //when adding new info to this class-
         //do the add-migration "info" and update-database
+
+        //navigation property for one to many relationship with ratings
+        //news it up if the list is blank
+        public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
+
+        //screen shot window key (next to alt and ctrl) + shift + s
     }
 }
